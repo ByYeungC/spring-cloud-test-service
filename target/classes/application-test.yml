@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    minIdle: 1
+    validationQuery: SELECT 1 FROM DUAL 
+    initialSize: 1
+    maxWait: 60000
+    filters: stat
+    poolPreparedStatements: true
+    url: jdbc:mysql://IP/zz_ent_users?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false
+    username: 
+    password: 
+    testOnBorrow: false
+    maxOpenPreparedStatements: 20
+    testWhileIdle: true
+    minEvictableIdleTimeMillis: 300000
+    timeBetweenEvictionRunsMillis: 60000
+    testOnReturn: false
+    driver-class-name: com.mysql.jdbc.Driver
+    maxActive: 20
+
+  redis:
+    host: 127.0.0.1
+    password: 
+    database: 0  
+    port: 6379  
+    pool:
+      max-idle: 8 
+      min-idle: 0 
+      max-active: 8
+      max-wait: -1 
+    
+    timeout: 0
